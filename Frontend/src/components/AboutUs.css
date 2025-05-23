@@ -1,0 +1,9 @@
+.AboutUs-div {
+    background-color: #EEEE;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Offset for the fixed navbar */
+  }
+  

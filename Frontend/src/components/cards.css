@@ -1,0 +1,22 @@
+.card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-medium);
+  background-color: #fff;
+  padding: var(--spacing-medium);
+  margin: var(--spacing-medium);
+  transition: box-shadow 0.3s ease;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: var(--box-shadow-light);
+}
+
+.card .img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: var(--spacing-small);
+}

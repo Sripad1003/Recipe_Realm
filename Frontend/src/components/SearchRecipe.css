@@ -1,0 +1,27 @@
+.SearchRecipe-div {
+    background-color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Offset for the fixed navbar */
+    display: flex;
+    flex-direction: column;
+  }
+.SearchRecipe-div.expanded {
+    height: auto; /* Adjust as needed for the expanded state */
+  }
+/* .search-result{
+  background-color: grey;
+  border-radius: 10px;
+} */
+#c{
+  display: flex;
+  flex-direction: column;
+}
+#c h1{
+  font-weight:bolder
+}
+.search-result{
+  border-radius: 10px;
+}

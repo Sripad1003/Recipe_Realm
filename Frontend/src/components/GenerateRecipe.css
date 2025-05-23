@@ -1,0 +1,99 @@
+.Generate-Recipe{
+    height: 100vh;
+    background-color: #EEEE;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Offset for the fixed navbar */
+    flex-direction: column;
+}
+.Generate-Recipe.expanded{
+    height: auto;
+}
+.ingredient-button{
+    width: fit-content;
+    padding-right: 20px;
+}
+#dismissables{
+    width: fit-content;
+}
+#selected_ingred{
+    display: flex;
+    flex-direction: row;
+}
+/* GenerateRecipe.css */
+
+.Generate-Recipe {
+    position: relative;
+    /* Your existing styles */
+}
+
+.bot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.bot-button i {
+    font-size: 24px;
+}
+
+/* Additional styles for the bot */
+/* GenerateRecipe.css */
+
+.Generate-Recipe {
+    position: relative;
+    /* Your existing styles */
+}
+
+.bot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1200; /* Ensure it is above other elements */
+}
+
+.bot-button i {
+    font-size: 24px;
+}
+
+.bot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
