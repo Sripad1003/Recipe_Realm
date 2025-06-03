@@ -4,3 +4,9 @@ backend/node_modules/
 backend/.cache/
 frontend/package-lock.json
 backend/package-lock.json
+Frontend/node_modules/
+Frontend/.cache/
+Backend/node_modules/
+Backend/.cache/
+Frontend/package-lock.json
+Backend/package-lock.json
