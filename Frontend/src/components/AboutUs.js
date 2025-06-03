@@ -1,55 +1,64 @@
 import React from 'react';
 import styled from 'styled-components';
-import CreditPage from './Creditpage'
-const PageContainer = styled.div`
+import CreditPage from './Creditpage';
+import './AboutUs.css'
+const PageContainer = styled.main`
+  background-color: #fba5fd;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #333;
+  min-height: 90vh;
   color: #fff;
   box-sizing: border-box;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.7s ease, color 0.7s ease;
 `;
 
-const TopSection = styled.div`
+const TopSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
-  padding: 10px;
+  padding: 1rem;
+  background-color: #333;
 `;
 
-const BottomSection = styled.div`
+const BottomSection = styled.section`
   flex: 1;
   overflow: hidden;
-  padding: 10px;
+  padding: 1rem;
+  background-color: #333;
 `;
 
 const TextBox = styled.div`
-  background-color: #4CAF50;
   color: #fff;
-  padding: 10px;
+  padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(24, 34, 10);
   max-width: 1200px;
   width: 90%;
   height: auto;
   text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: background-color 0.7s ease, color 0.7s ease;
 `;
 
 const Heading = styled.h1`
   margin-top: 0;
-  font-size: 1.5em;
+  font-size: 2rem;
+  font-weight: 700;
 `;
 
 const Paragraph = styled.p`
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
 `;
 
 const AboutSashakt = () => {
   return (
-    <PageContainer>
+    <PageContainer role="main" aria-label="About Us page content">
       <TopSection>
         <TextBox>
           <Heading>Welcome to Recipe Realm!</Heading>

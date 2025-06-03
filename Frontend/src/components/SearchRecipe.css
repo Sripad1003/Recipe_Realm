@@ -1,27 +1,37 @@
 .SearchRecipe-div {
-    background-color: #FFFFFF;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px; /* Offset for the fixed navbar */
-    display: flex;
-    flex-direction: column;
-  }
+  background-color: #fff;
+  /* Removed min-height to reduce page height */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding-top: 60px; Offset for the fixed navbar */
+  flex-direction: column;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+  box-sizing: border-box;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
 .SearchRecipe-div.expanded {
-    height: auto; /* Adjust as needed for the expanded state */
-  }
-/* .search-result{
-  background-color: grey;
-  border-radius: 10px;
-} */
-#c{
+  min-height: auto; /* Adjust as needed for the expanded state */
+}
+
+#c {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-small);
 }
-#c h1{
-  font-weight:bolder
+
+#c h1 {
+  font-weight: bolder;
+  margin-bottom: var(--spacing-small);
 }
-.search-result{
+
+.search-result {
   border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: var(--spacing-medium);
+  background-color: var(--color-background);
+  transition: background-color 0.7s ease, color 0.7s ease;
 }

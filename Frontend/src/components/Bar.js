@@ -23,7 +23,7 @@ function Bar() {
 
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar bg="light">
         <Container>
           <Nav className="me-auto">
             <Nav.Link
@@ -50,12 +50,12 @@ function Bar() {
             >
               About Us
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               onClick={() => handleNavigation('/favs')}
                className={path === '/favs' ? 'active' : ''}
             >
               Favourites
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Container>
       </Navbar>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import "./GenerateRecipe.css";
 import SearchBar_ingred from './SearchBar_ingred/SearchBar';
 import Recipe_content from './recipe_content.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Bot from './chatbot/App.js';
 import 'ldrs/ring'; 
+import "./GenerateRecipe.css";
 
 function GenerateRecipe() {
     const [recipe_json, Setrecipe_json] = useState([]);
@@ -50,40 +50,41 @@ function GenerateRecipe() {
     };
 
     return (
-        <div className={`Generate-Recipe ${Btn_clicked ? 'expanded' : ''}`}>
-            <h1>Search ingredients</h1>
-            {/* <h1>{selectedIngredients.join(', ')}</h1> */}
-            <SearchBar_ingred selected_json={setJsonObj} />
-            <div className='container' id="selected_ingred">
-                {selectedIngredients.map((ingredient) => (
-                    <div key={ingredient} className="ingredient-button">
-                        <div className="alert alert-warning alert-dismissible fade show" role="alert" id='dismissables'>
-                            <strong>{ingredient}</strong>
-                            <button 
-                                type="button" 
-                                className="btn-close" 
-                                aria-label="Close" 
-                                onClick={() => handleRemoveIngredient(ingredient)}
-                            ></button>
+        <div className="App">
+            <div className={`Generate-Recipe ${Btn_clicked ? 'expanded' : ''}`}>
+                <h1>Search ingredients</h1>
+                <div className='container' id="selected_ingred">
+                    {selectedIngredients.map((ingredient) => (
+                        <div key={ingredient} className="ingredient-button">
+                            <div className="alert alert-warning alert-dismissible fade show" role="alert" id='dismissables'>
+                                <strong>{ingredient}</strong>
+                                <button 
+                                    type="button" 
+                                    className="btn-close" 
+                                    aria-label="Close" 
+                                    onClick={() => handleRemoveIngredient(ingredient)}
+                                ></button>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-            {loading && <l-ring size="60" color="coral"></l-ring>}
-            <button type="button" className="btn btn-dark" onClick={ongeneraterecipe_click}>Generate Recipe</button>
-            
+                    ))}
+                </div>
+                    <SearchBar_ingred selected_json={setJsonObj} />
+                <button type="button" className="btn btn-dark" onClick={ongeneraterecipe_click}>Generate Recipe</button>
+                {loading && <l-ring size="60" color="coral"></l-ring>}
+                
 
-            <div className='container'>
-                <Recipe_content results={recipe_json} showBtn={setShowBtn} showBot={showBot}/>
+                <div className='container'>
+                    <Recipe_content results={recipe_json} showBtn={setShowBtn} showBot={showBot}/>
+                </div>
+                
+                {showBtn && (
+                    <button className="bot-button" onClick={toggleBot}>
+                        <i className="fas fa-robot"></i>
+                    </button>
+                )}
+                
+                {/* {showBot && <Bot />} */}
             </div>
-            
-            {showBtn && (
-                <button className="bot-button" onClick={toggleBot}>
-                    <i className="fas fa-robot"></i>
-                </button>
-            )}
-            
-            {/* {showBot && <Bot />} */}
         </div>
     );
 }

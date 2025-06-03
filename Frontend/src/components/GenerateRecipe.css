@@ -1,99 +1,118 @@
-.Generate-Recipe{
-    height: 100vh;
-    background-color: #EEEE;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px; /* Offset for the fixed navbar */
-    flex-direction: column;
-}
-.Generate-Recipe.expanded{
-    height: auto;
-}
-.ingredient-button{
-    width: fit-content;
-    padding-right: 20px;
-}
-#dismissables{
-    width: fit-content;
-}
-#selected_ingred{
-    display: flex;
-    flex-direction: row;
-}
-/* GenerateRecipe.css */
-
 .Generate-Recipe {
-    position: relative;
-    /* Your existing styles */
+  /* Removed min-height to prevent forced vertical scroll */
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 60px; Offset for the fixed navbar */
+  flex-direction: column;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+  box-sizing: border-box;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.Generate-Recipe.expanded {
+  min-height: auto;
+}
+
+.ingredient-button {
+  width: fit-content;
+  padding-right: 20px;
+  margin-bottom: var(--spacing-small);
+}
+
+#dismissables {
+  width: fit-content;
+}
+
+#selected_ingred {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-small);
+  justify-content: center;
+}
+
+button.btn.btn-dark {
+  align-self: center;
+  margin-bottom: var(--spacing-medium);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+button.btn.btn-dark:hover {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
 }
 
 .bot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1200; /* Ensure it is above other elements */
 }
 
 .bot-button i {
-    font-size: 24px;
-}
-
-/* Additional styles for the bot */
-/* GenerateRecipe.css */
-
-.Generate-Recipe {
-    position: relative;
-    /* Your existing styles */
-}
-
-.bot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1200; /* Ensure it is above other elements */
-}
-
-.bot-button i {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .bot-container {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    border-radius: 8px;
-    z-index: 1000;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* Responsive flexbox layout for recipe cards container */
+#recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium);
+}
+
+#recipes .card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin: var(--spacing-small);
+}
+
+@media (min-width: 600px) {
+  #recipes .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  #recipes .card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
 }
 

@@ -1,21 +1,25 @@
 :root {
-  --color-background: #f9f9f9;
-  --color-primary: #4a90e2;
+  --color-background: #fba5fd;
+  --color-primary: #4e9af1;
   --color-secondary: #50e3c2;
-  --color-text: #333;
-  --color-muted: #777;
+  --color-text: #000000;
+  --color-muted: #6666c1;
+  --color-section-bg: #272736;
   --spacing-small: 8px;
   --spacing-medium: 16px;
   --spacing-large: 32px;
-  --border-radius: 8px;
-  --box-shadow-light: rgba(0, 0, 0, 0.1) 0px 2px 4px;
-  --box-shadow-medium: rgba(0, 0, 0, 0.15) 0px 4px 8px;
+  --border-radius: 10px;
+  --box-shadow-light: rgba(0, 0, 0, 0.5) 0px 2px 6px;
+  --box-shadow-medium: rgba(0, 0, 0, 0.7) 0px 4px 12px;
+  --navbar-height: 60px;
+  --footer-height: 60px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body, html, #root {
@@ -24,6 +28,7 @@ body, html, #root {
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .App {
@@ -37,13 +42,15 @@ body, html, #root {
 }
 
 .content {
-  margin-top: var(--spacing-large);
+  margin-top: var(--navbar-height);
+  margin-bottom: var(--footer-height);
   padding: 0 var(--spacing-medium);
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: #fba5fd;
 }
 
 /* Utility classes */
@@ -57,4 +64,18 @@ body, html, #root {
 
 .mb-medium {
   margin-bottom: var(--spacing-medium);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 var(--spacing-small);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 var(--spacing-small);
+    margin-top: calc(var(--navbar-height) / 2);
+    margin-bottom: calc(var(--footer-height) / 2);
+  }
 }
