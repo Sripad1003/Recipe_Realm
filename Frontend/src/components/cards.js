@@ -9,7 +9,7 @@ function BasicExample({ json, handleShowModal}) {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Img variant="top" src={json['image-url']} onError={handleImageError} />
       <Card.Body>
         <Card.Title>{json.title}</Card.Title>
