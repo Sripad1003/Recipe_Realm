@@ -2,17 +2,12 @@
   width: 100%;
   height: 2.5rem;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 10px;
   padding: 0 15px;
-  box-shadow: var(--box-shadow-light);
+  box-shadow: 0px 0px 8px #ddd;
   background-color: white;
   display: flex;
   align-items: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.input-wrapper:focus-within {
-  box-shadow: 0 0 8px var(--color-primary);
 }
 
 input {
@@ -22,7 +17,6 @@ input {
   font-size: 1.25rem;
   width: 100%;
   margin-left: 5px;
-  color: var(--color-text);
 }
 
 input:focus {
@@ -30,10 +24,5 @@ input:focus {
 }
 
 #search-icon {
-  color: var(--color-primary);
-  transition: color 0.3s ease;
-}
-
-.input-wrapper:focus-within #search-icon {
-  color: var(--color-secondary);
+  color: royalblue;
 }

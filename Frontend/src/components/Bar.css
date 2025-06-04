@@ -1,37 +1,67 @@
-.navbar {
-  border-radius: 10px;
-  height: 60px;
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar .container {
-  height: 100%;
-  padding-top: 2px;
-}
-
-.navbar-nav .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  border-radius: 22.5px;
-  padding: 0 15px;
-  margin: 0 5px;
-  text-align: center;
-  line-height: 50px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link.active {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 0 15px;
-}
-
-@media (max-width: 768px) {
-  .navbar-nav .nav-link {
-    padding: 0 10px;
-    margin: 0 3px;
-    font-size: 0.9rem;
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
   }
-}
+  
+  .navbar .nav-link {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #df4c4f /* warm golden orange */
+  }
+  
+  .navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #df4c4f;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-link:hover::after {
+    width: 100%;
+  }
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        0 0 8px 3px #df4c4f;
+    }
+    50% {
+      box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        0 0 16px 6px #df4c4f;
+    }
+  }
+  
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 14px;
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.2),
+      0 0 8px 3px #df4c4f;
+    animation: glowPulse 3s infinite ease-in-out;
+    transition: all 0.3s ease;
+  }
+  

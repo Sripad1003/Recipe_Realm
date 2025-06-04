@@ -8,9 +8,7 @@ import Bot from './chatbot/App';
 function Recipe_content({ results,showBtn,showBot }) {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-  const uniqueResults = results.filter((result, index, self) => {
-    return self.findIndex((r) => r.id === result.id) === index;
-  });
+
   const handleShowModal = (json) => {
     setModalContent(json);
     setShowModal(true);
@@ -42,6 +40,7 @@ function Recipe_content({ results,showBtn,showBot }) {
             {modalContent.ingredients}
             <h5>Instructions</h5>
             {modalContent.instructions}
+            {/* <h5></h5> */}
             <Timebox json_obj={modalContent} result_selected={false}/>
           </Modal.Body>
           <Modal.Footer>

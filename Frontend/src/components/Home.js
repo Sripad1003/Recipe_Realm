@@ -6,58 +6,34 @@ import pic3 from './pic3.png';
 
 const Home = () => {
   return (
-    <main className='home-div' role="main" aria-label="Home page content">
-      <section className='section-beige' aria-labelledby="mission-vision-title">
-        <h1 align='center' id="mission-vision-title">🌟 Mission, Vision & Values of Recipe Realm 🌟</h1>
-        <div className='container-scrollable' id="container-1">
-          <p>
-            The lifestyles we lead and the environments we work in have brought about drastic changes in our health over the past few decades.
-            🏙️ With urban routines becoming increasingly taxing—polluted surroundings 🌫️, irregular work hours ⏰, and high-stress levels 💼—many of us face physical fatigue and mental burnout 😞.
-          </p>
-          <p>
-            As the world around us evolves, it's crucial to pause, reflect, and prioritize what fuels us: food and fitness 🍲💪.
-          </p>
-          <p>That's where <strong>Recipe Realm</strong> steps in!
-          </p>
-          <p><strong>🚀 Our Mission:</strong></p>
-          <p>
-            To inspire and empower people of all backgrounds to reclaim their health through creative, nutritious, and easy-to-make recipes. We aim to make healthy living simple, exciting, and accessible! 🥗👩‍🍳✨
-          </p>
-
-          <p><strong>🌈 Our Vision:</strong></p>
-          <p>
-            To build a vibrant, global community where food is more than sustenance—it’s a source of joy, wellness, and connection 🌍❤️. We envision a world where cooking becomes a daily ritual of self-love and well-being.
-          </p>
-
-          <p><strong>💡 Our Core Values:</strong></p>
-          <ul>
-            <li>🔥 <strong>Inspiration</strong> — Encouraging creativity in the kitchen</li>
-            <li>🧘‍♂️ <strong>Wellness First</strong> — Promoting a holistic and healthy lifestyle</li>
-            <li>🧂 <strong>Simplicity</strong> — Making every recipe doable and fun</li>
-            <li>🌿 <strong>Sustainability</strong> — Caring for our planet as much as our plates</li>
-            <li>🤝 <strong>Community</strong> — Fostering togetherness, sharing, and growth</li>
-          </ul>
+    <main id="home" className='home-div' style={{ overflowY: 'auto', maxHeight: '100vh', padding: '20px' }}>
+      <section className='div1' id="whats-cooking" style={{ marginBottom: '40px' }}>
+        <div className='container' id="container-1">
+          <h1>What's Cooking? 🍳</h1>
+          <h2 style={{ fontSize: '1.1rem', color: '#6c584c', marginBottom: '20px' }}>
+            Here’s why Recipe-Realm is your new kitchen BFF.
+          </h2>
+          <p><strong>✨ Smart Recipes, Just for You:</strong> Tired of Googling what to make with random leftovers? Enter your ingredients and we’ll whip up a personalized recipe faster than you can say “microwave magic.”</p>
+          <p><strong>🔍 Know Your Food:</strong> Get the 411 on any dish — cooking time, nutrition, tips, and even those grandma-style pro hacks.</p>
+          <p><strong>🤖 Chat with Annapurna:</strong> Our AI chef BFF isn’t just smart — she’s helpful, friendly, and won’t judge your instant noodle habits.</p>
         </div>
+        <div className='lower'></div>
       </section>
 
-      <section className='section-bisque' aria-labelledby="how-to-use-title">
-        <h1 id="how-to-use-title">📖 How to Use</h1>
-        <div className='container-scrollable' id="container-2">
-          <ol>
-            <li>Enter each ingredient in the search bar and press Enter when it appears in the auto-suggest list.</li>
-            <li>Check that all the ingredients show up in the yellow boxes below.</li>
-            <li>Click the <strong>'Generate Recipe'</strong> button to see a recipe based on your selected ingredients.</li>
-            <li>Explore the dishes and click any of them for full details.</li>
-            <li>Use the chatbot anytime for instant help or cooking guidance. 🤖</li>
-          </ol>
+      <section className='div2' id="how-to-use">
+        <div className='container' id="container-2">
+          <h1>How-to-Use</h1>
+          <p>1. Enter each ingredient in the search bar and press enter if you find it in the auto-suggest list. Check if all the ingredients appear below in the yellow boxes. After ensuring that all the items have been added, click the 'Generate Recipe' button. Your recipe will be generated based on the selected ingredients.</p>
           <img src={pic1} alt="Search Bar" />
+          <p>2. Select any dish.</p>
           <img src={pic2} alt="Yellow Boxes" />
+          <p>3. Use the chatbot for any queries</p>
           <img src={pic3} alt="Generate Button" />
         </div>
+        <div className='lower'></div>
       </section>
     </main>
   );
 };
-
 
 export default Home;
