@@ -5,11 +5,12 @@ import './Bar.css'
 
 function handleclick() {
   setTimeout(() => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
+    window.scrollBy({
+      top: 200,
+      left: 0,
       behavior: 'smooth'
     });
-  }, 1000); // 1000 milliseconds = 1 second
+  }, 500);
 }
 
 function Bar() {

@@ -5,7 +5,7 @@ import './cards.css';
 
 function BasicExample({ json, handleShowModal }) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Body>
         <Card.Title className="cute-title">{json.title}</Card.Title>
         <Card.Text>
