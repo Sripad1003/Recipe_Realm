@@ -53,10 +53,3 @@ Recipe Relam is a web application that allows users to generate recipes based on
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-## License
-
-[MIT](LICENSE)
-
----
-
-*Ensure your images (`pic1.png`, `pic2.png`, `pic3.png`) are placed in `Frontend/src/components/` as referenced above for them to display correctly in the README.*
