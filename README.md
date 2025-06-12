@@ -12,13 +12,12 @@ Recipe Relam is a web application that allows users to generate recipes based on
 ## How to Use
 
 <div className='container' id="container-2">
-  <h1>How-to-Use</h1>
   <p>1. Enter each ingredient in the search bar and press enter if you find it in the auto-suggest list. Check if all the ingredients appear below in the yellow boxes. After ensuring that all the items have been added, click the 'Generate Recipe' button. Your recipe will be generated based on the selected ingredients.</p>
-  <img src="src/Images/pic1.png" alt="Search Bar" />
+  <img src="Frontend/src/components/pic1.png" alt="Search Bar" />
   <p>2. Select any dish.</p>
-  <img src="src/Images/pic2.png" alt="Yellow Boxes" />
+  <img src="Frontend/src/components/pic2.png" alt="Yellow Boxes" />
   <p>3. Use the chatbot for any queries</p>
-  <img src="src/Images/pic3.png" alt="Generate Button" />
+  <img src="Frontend/src/components/pic3.png" alt="Generate Button" />
 </div>
 
 ## Setup
@@ -40,7 +39,7 @@ Recipe Relam is a web application that allows users to generate recipes based on
    ```bash
    npm start
    ```
-   The app will typically be available at `http://localhost:3000`.
+   By default, the app will typically be available at `http://localhost:3000`.
 
 ## Technologies Used
 
@@ -60,4 +59,4 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ---
 
-*Replace the image paths in the How-to-Use section if your image files are stored elsewhere.*  
+*Ensure your images (`pic1.png`, `pic2.png`, `pic3.png`) are placed in `Frontend/src/components/` as referenced above for them to display correctly in the README.*
