@@ -12,6 +12,7 @@ Recipe Relam is a web application that allows users to generate recipes based on
 ## How to Use
 
 <div className='container' id="container-2">
+  <h1>How-to-Use</h1>
   <p>1. Enter each ingredient in the search bar and press enter if you find it in the auto-suggest list. Check if all the ingredients appear below in the yellow boxes. After ensuring that all the items have been added, click the 'Generate Recipe' button. Your recipe will be generated based on the selected ingredients.</p>
   <img src="Frontend/src/components/pic1.png" alt="Search Bar" />
   <p>2. Select any dish.</p>
@@ -22,34 +23,63 @@ Recipe Relam is a web application that allows users to generate recipes based on
 
 ## Setup
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Sripad1003/Recipe_Relam.git
-   cd Recipe_Relam
-   ```
+Follow these steps to set up and run both the frontend and backend of Recipe Relam:
 
-2. **Install Dependencies:**
-   - For the frontend, run:
-     ```bash
-     npm install
-     ```
-   - (If backend exists, install for backend as well)
+### 1. Clone the Repository
 
-3. **Start the App:**
-   ```bash
-   npm start
-   ```
-   By default, the app will typically be available at `http://localhost:3000`.
+```bash
+git clone https://github.com/Sripad1003/Recipe_Relam.git
+cd Recipe_Relam
+```
+
+### 2. Backend Setup
+
+- Ensure you have Python and Jupyter Notebook installed.
+- Open and run the `recipe_realm.ipynb` notebook.  
+  This notebook will start the backend server and generate an **ngrok tunnel link** (public URL) to your backend.
+- Copy the generated ngrok link.
+
+#### Update the Frontend for Chatbot Connection
+
+- Open the file:  
+  `Frontend/src/components/chatbot/Chatbot/ActionProvider.js`
+- Replace the existing backend URL with your new ngrok link to ensure the chatbot connects properly.
+
+#### Start the Backend Server
+
+- Move to the backend directory (if applicable) and install dependencies:
+  ```bash
+  npm install
+  ```
+- Start the backend server:
+  ```bash
+  npm run server
+  ```
+
+### 3. Frontend Setup
+
+- Move to the frontend directory:
+  ```bash
+  cd Frontend
+  ```
+- Install frontend dependencies:
+  ```bash
+  npm install
+  ```
+- Start the frontend development server:
+  ```bash
+  npm start
+  ```
+  By default, the app will be available at `http://localhost:3000`.
 
 ## Technologies Used
 
-- Jupyter Notebook (for backend/ML)
-- JavaScript (React.js)
-- CSS
-- HTML
-- Python
+- **Jupyter Notebook** (Python) — Backend & recipe generation logic
+- **JavaScript (React.js)** — Frontend
+- **Node.js/Express** — Backend API and routing
+- **CSS** — Styling
+- **HTML** — Markup
 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
-
