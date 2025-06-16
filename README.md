@@ -1,6 +1,6 @@
-# Recipe Relam
+# Recipe Realm
 
-Recipe Relam is a web application that allows users to generate recipes based on selected ingredients. With an intuitive interface and a smart chatbot for queries, you can easily discover new dishes using what you have at hand!
+Recipe Realm is a web application that allows users to generate recipes based on selected ingredients. With an intuitive interface and a smart chatbot for queries, you can easily discover new dishes using what you have at hand!
 
 ## Features
 
@@ -23,13 +23,13 @@ Recipe Relam is a web application that allows users to generate recipes based on
 
 ## Setup
 
-Follow these steps to set up and run both the frontend and backend of Recipe Relam:
+Follow these steps to set up and run both the frontend and backend of Recipe Realm:
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Sripad1003/Recipe_Relam.git
-cd Recipe_Relam
+git clone https://github.com/Sripad1003/Recipe_Realm.git
+cd Recipe_Realm
 ```
 
 ### 2. Backend Setup
